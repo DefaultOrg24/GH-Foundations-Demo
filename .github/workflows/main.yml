@@ -8,8 +8,8 @@ jobs:
     uses: DefaultOrg24/GH-Actions-Training/.github/workflows/reusable_workflow.yml@main
 
   jobB:
-      needs: jobA
-      runs-on: windows-latest
-      steps:
-          - run: 
-              echo "Add other actions to build, test and deployment"
+    needs: jobA
+    runs-on: windows-latest
+    steps:      
+      - name: Build
+        run: echo "Building the application..."
