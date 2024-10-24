@@ -1,0 +1,14 @@
+name: Caller workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  jobA:
+    uses: DefaultOrg24/GH-Actions-Training/.github/workflows/reusable_workflow.yml@main
+
+  jobB:
+      runs-on: windows-latest
+      steps:
+          - run: 
+              echo "Add other actions to build, test and deployment"
