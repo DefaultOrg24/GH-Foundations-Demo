@@ -8,6 +8,7 @@ jobs:
     uses: DefaultOrg24/GH-Actions-Training/.github/workflows/reusable_workflow.yml@main
 
   jobB:
+      needs: jobA
       runs-on: windows-latest
       steps:
           - run: 
